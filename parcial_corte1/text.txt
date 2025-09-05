@@ -1,0 +1,20 @@
+patron_placa = r"^[A-Z]{3}+[0-9]{3}+$"
+placa = "ABC123"
+detectar_placa = re.findall(patron_placa,placa)
+print(detectar_placa )
+
+patron_cedula = r"\d{6,10}"
+cedula =" 1052223322"
+validar_cedula = re.findall(patron_cedula,cedula)
+print(validar_cedula)
+
+
+usuario = "MAria_23"
+patron_user= r"^[A-Z a-z ][A-Z a-z 0-9 _]{3,11}$"
+confirm_user = re.findall(patron_user,usuario)
+print (confirm_user)
+
+palabra = " Ana  es Karen Pero Karen es Ana "
+patron_palabra = r" \b[A-Z][a-z]*\b"
+detectar_palabras = re.findall(patron_palabra, palabra)
+print(detectar_palabras)
